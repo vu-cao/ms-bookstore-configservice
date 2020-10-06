@@ -3,9 +3,14 @@ server:
 
 spring:
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:config/bookservice
+        git:
+          uri: https://github.com/vu-cao/configserver-git/
+          search-paths: bookservice
+          username: vu-cao
+          password: d9d12b6114ce5c46fbe17de0915f28b60257a970
+#        native:
+#          search-locations: classpath:config/bookservice
